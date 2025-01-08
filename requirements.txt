@@ -1,0 +1,9 @@
+huggingface_hub
+gradio
+transformers
+torch
+accelerate
+spaces
+bitsandbytes
+autoawq
+#for deployment on hugging face, requirements differ if deploying local
