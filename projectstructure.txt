@@ -1,0 +1,35 @@
+rena-ai-project/
+│── backend/                     # FastAPI Backend (Python)
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── main.py              # FastAPI entry point
+│   │   ├── models.py            # AI model loader (TheBloke/U-Amethyst-20B-AWQ)
+│   │   ├── chat.py              # Chat logic (conversation, memory)
+│   │   ├── emotions.py          # Sentiment analysis & emotion responses
+│   │   ├── database.py          # Redis/PostgreSQL integration
+│   │   ├── config.py            # Environment variables
+│   │   ├── requirements.txt     # Python dependencies
+│   │   ├── Dockerfile           # Docker setup for AWS
+│   │   ├── .env                 # API keys & database settings
+│── websocket-server/             # C# WebSocket API (ASP.NET Core)
+│   ├── Program.cs               # WebSocket logic (connects FastAPI & frontend)
+│   ├── appsettings.json         # Configuration (C# server settings)
+│   ├── Dockerfile               # Deployment for AWS EC2
+│   ├── websocket-server.csproj  # Project config
+│── frontend/                     # Web Interface (Next.js / React)
+│   ├── src/
+│   │   ├── components/          # UI Components
+│   │   ├── pages/               # Next.js pages (chat interface)
+│   │   ├── services/            # WebSocket & API calls
+│   │   ├── styles/              # CSS / Tailwind
+│   │   ├── public/              # Static assets (avatars, icons)
+│   │   ├── package.json         # Frontend dependencies
+│   │   ├── next.config.js       # Next.js configuration
+│   │   ├── .env.local           # Frontend API URLs
+│── infra/                        # AWS Deployment & Infrastructure
+│   ├── terraform/               # Terraform files for AWS setup
+│   ├── deployment-scripts/      # CI/CD pipelines
+│   ├── nginx/                   # Reverse proxy configuration
+│── docs/                         # Documentation
+│   ├── README.md                # Project documentation
+│   ├── API-docs.md              # API reference for backend & WebSocket

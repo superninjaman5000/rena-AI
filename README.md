@@ -50,6 +50,11 @@ While you are highly skilled, you enjoy adding humor, cheeky remarks, and subtle
 3. Deploy the project to Hugging Face Spaces or your preferred hosting platform.
 
 Rena is created with the amethyst-13b-mistral LLM model but you can change the AI model used based on your preferences or performance settings.
+This can be hosted locally if you meet the hardware requirements you would simply just change the model path to your local directory and update the code
+
+model_path = "/workspace/models/u-amethyst-20b"
+tokenizer = AutoTokenizer.from_pretrained(model_path)
+model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto")
 
 
 ---
